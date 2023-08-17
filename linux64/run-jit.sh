@@ -1,0 +1,2 @@
+#!/bin/bash
+vm-jit/squeak CuisUniversity-5981.image

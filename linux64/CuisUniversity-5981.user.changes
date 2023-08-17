@@ -1,0 +1,118 @@
+
+
+----QUIT----(13 August 2023 19:14:09) CuisUniversity-5981.image priorSource: 5713367!
+
+----STARTUP---- (13 August 2023 19:14:10) as /Users/hernan/Documents/Cuis/5.0-64Bits/Cuis-University-Installer/CuisUniversity-5981.image!
+
+
+----QUIT----(13 August 2023 19:14:10) CuisUniversity-5981.image priorSource: 10197065!
+
+----STARTUP---- (17 August 2023 14:11:44) as /home/tomas/uba/inge1/linux64/CuisUniversity-5981.image!
+
+
+ObjectBuilder create: #Bill
+	collaboratorNames: ''
+	in: '3eraAct'
+	!
+
+!classDefinition: #Bill category: '3eraAct' stamp: 'tp 8/17/2023 14:14:14'!
+DenotativeObject subclass: #Bill
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '3eraAct'!
+
+!classDefinition: 'Bill class' category: '3eraAct' stamp: 'tp 8/17/2023 14:14:14'!
+Bill class
+	instanceVariableNames: ''!
+
+Bill
+	collaboratorNames: 'energia'
+	in: '3eraAct'!
+
+!classDefinition: 'Bill class' category: '3eraAct' stamp: 'tp 8/17/2023 14:14:30'!
+Bill class
+	instanceVariableNames: 'energia'!
+
+!classDefinition: #Bill category: '3eraAct' stamp: 'tp 8/17/2023 14:14:30'!
+DenotativeObject subclass: #Bill
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: '3eraAct'!
+
+!classDefinition: 'Bill class' category: '3eraAct' stamp: 'tp 8/17/2023 14:14:30'!
+Bill class
+	instanceVariableNames: 'energia'!
+!Bill class methodsFor: 'no messages' stamp: 'tp 8/17/2023 14:14:49'!
+energia
+	^energia! !
+
+Bill energia !
+
+Bill energia !
+
+ nil .!
+
+Bill energia !
+
+Bill!
+
+Bill energia !
+!Bill class methodsFor: 'consultas' stamp: 'tp 8/17/2023 14:16:55'!
+come: unaCantidadDeKilosDeCerebro
+	energia := 4 days * unaCantidadDeKilosDeCerebro  + energia! !
+
+Bill come: 4!
+
+Bill energia.!
+!Bill class methodsFor: 'consultas' stamp: 'tp 8/17/2023 14:17:34' prior: 50650357!
+come: unaCantidadDeKilosDeCerebro
+	energia := (4 days * unaCantidadDeKilosDeCerebro) + energia! !
+!Bill class methodsFor: 'consultas' stamp: 'tp 8/17/2023 14:17:45' prior: 50650364!
+come: unaCantidadDeKilosDeCerebro
+	energia := 4 days * unaCantidadDeKilosDeCerebro + energia! !
+!Bill class methodsFor: 'consultas y acciones' stamp: 'tp 8/17/2023 14:21:00'!
+camina: unaCantidadDeKilometros
+	| energiaGastada |
+	energiaGastada := unaCantidadDeKilometros days + 3 days.
+	"ver que no sea negativo"
+	energia := energia - energiaGastada.! !
+!Bill class methodsFor: 'consultas y acciones' stamp: 'tp 8/17/2023 14:28:25' prior: 50650376!
+camina: unaCantidadDeKilometros
+	| energiaGastada|
+	energiaGastada := unaCantidadDeKilometros days + 3 days.
+	"ver que no sea negativo"
+	energia := energia - energiaGastada. 
+	! !
+
+Bill energia!
+
+Bill come: 1!
+
+Bill come: 1!
+
+Bill energia!
+
+Bill come: 1.!
+
+Bill energia!
+
+Bill camina: 1!
+
+Bill energia.!
+
+Bill camina: 1!
+
+Bill energia.!
+!Bill class methodsFor: '--** private fileout/in **--' stamp: 'tp 8/17/2023 14:29:46' overrides: 50637315!
+initializeCollaboratorsFromFile
+	"Auto generated method for loading purposes - Do not modify it"
+
+	energia := (Duration seconds: 4147200 nanoSeconds: 0).! !
+
+!methodRemoval: Bill class #initializeCollaboratorsFromFile stamp: 'tp 8/17/2023 14:29:46'!
+initializeCollaboratorsFromFile
+	"Auto generated method for loading purposes - Do not modify it"
+
+	energia := (Duration seconds: 4147200 nanoSeconds: 0).!
