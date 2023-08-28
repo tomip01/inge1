@@ -116,3 +116,516 @@ initializeCollaboratorsFromFile
 	"Auto generated method for loading purposes - Do not modify it"
 
 	energia := (Duration seconds: 4147200 nanoSeconds: 0).!
+
+----STARTUP---- (28 August 2023 11:36:58) as /home/tomas/uba/inge1/linux64/CuisUniversity-5981.image!
+
+
+----End fileIn of /home/tomas/uba/inge1/linux64/Peano.st----!
+
+!classRemoval: #III stamp: 'tp 8/28/2023 11:38:11'!
+DenotativeObject subclass: #III
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Peano'!
+
+!classRemoval: #IIII stamp: 'tp 8/28/2023 11:38:13'!
+DenotativeObject subclass: #IIII
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Peano'!
+
+!classRemoval: #IIIII stamp: 'tp 8/28/2023 11:38:15'!
+DenotativeObject subclass: #IIIII
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Peano'!
+!I class methodsFor: 'as yet unclassified' stamp: 'tp 8/28/2023 11:39:13'!
+* aNaturalNumber
+
+	^ aNaturalNumber! !
+
+I * II!
+!II class methodsFor: 'as yet unclassified' stamp: 'tp 8/28/2023 11:41:14'!
+* aNaturalNumber
+
+	^ aNaturalNumber  multiplicateA: self! !
+!II class methodsFor: 'as yet unclassified' stamp: 'tp 8/28/2023 11:43:39'!
+multiplicateA: aNaturalNumber
+
+	^ (aNaturalNumber* self previous) + aNaturalNumber! !
+!II class methodsFor: 'as yet unclassified' stamp: 'tp 8/28/2023 11:44:43' prior: 50650616!
+multiplicateA: aNaturalNumber
+
+	^ (aNaturalNumber * self previous) + aNaturalNumber! !
+
+II * II!
+
+II * I!
+!II class methodsFor: 'as yet unclassified' stamp: 'tp 8/28/2023 11:46:18' prior: 50650622!
+multiplicateA: aNaturalNumber
+
+	^ (aNaturalNumber * self previous) + aNaturalNumber! !
+
+II * I!
+
+II next!
+
+II next!
+
+DenotativeObject subclass: #III
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Peano'!
+
+!classDefinition: #III category: 'Peano' stamp: 'tp 8/28/2023 11:47:14'!
+DenotativeObject subclass: #III
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Peano'!
+
+III class
+	instanceVariableNames: 'next previous'!
+
+!classDefinition: 'III class' category: 'Peano' stamp: 'tp 8/28/2023 11:47:14'!
+III class
+	instanceVariableNames: 'next previous'!
+!III class methodsFor: 'as yet unclassified' stamp: 'tp 8/28/2023 11:47:14'!
+* aNaturalNumber
+
+	^ aNaturalNumber  multiplicateA: self! !
+!III class methodsFor: 'as yet unclassified' stamp: 'tp 8/28/2023 11:47:14'!
++ aNaturalNumber
+	^ self previous + aNaturalNumber next! !
+!III class methodsFor: 'as yet unclassified' stamp: 'tp 8/28/2023 11:47:14'!
+- aNaturalNumber
+        
+	aNaturalNumber = I ifTrue: [^self previous].
+	^ self previous - aNaturalNumber previous 
+	! !
+!III class methodsFor: 'as yet unclassified' stamp: 'tp 8/28/2023 11:47:14'!
+multiplicateA: aNaturalNumber
+
+	^ (aNaturalNumber * self previous) + aNaturalNumber! !
+!III class methodsFor: 'as yet unclassified' stamp: 'tp 8/28/2023 11:47:14'!
+next
+	next ifNotNil: [^next].
+	next:= self cloneNamed: self name, 'I'.
+	next previous: self.
+	^next.! !
+!III class methodsFor: 'as yet unclassified' stamp: 'tp 8/28/2023 11:47:14'!
+previous
+	^previous! !
+!III class methodsFor: 'as yet unclassified' stamp: 'tp 8/28/2023 11:47:14'!
+previous: aNaturalNumber
+	previous:= aNaturalNumber! !
+
+II * II!
+!I class methodsFor: 'as yet unclassified' stamp: 'tp 8/28/2023 11:48:06'!
+multiplicateA: aNaturalNumber
+
+	^ aNaturalNumber! !
+
+II * II!
+
+DenotativeObject subclass: #IIII
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Peano'!
+
+!classDefinition: #IIII category: 'Peano' stamp: 'tp 8/28/2023 11:48:10'!
+DenotativeObject subclass: #IIII
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Peano'!
+
+IIII class
+	instanceVariableNames: 'next previous'!
+
+!classDefinition: 'IIII class' category: 'Peano' stamp: 'tp 8/28/2023 11:48:10'!
+IIII class
+	instanceVariableNames: 'next previous'!
+!IIII class methodsFor: 'as yet unclassified' stamp: 'tp 8/28/2023 11:48:10'!
+* aNaturalNumber
+
+	^ aNaturalNumber  multiplicateA: self! !
+!IIII class methodsFor: 'as yet unclassified' stamp: 'tp 8/28/2023 11:48:10'!
++ aNaturalNumber
+	^ self previous + aNaturalNumber next! !
+!IIII class methodsFor: 'as yet unclassified' stamp: 'tp 8/28/2023 11:48:10'!
+- aNaturalNumber
+        
+	aNaturalNumber = I ifTrue: [^self previous].
+	^ self previous - aNaturalNumber previous 
+	! !
+!IIII class methodsFor: 'as yet unclassified' stamp: 'tp 8/28/2023 11:48:10'!
+multiplicateA: aNaturalNumber
+
+	^ (aNaturalNumber * self previous) + aNaturalNumber! !
+!IIII class methodsFor: 'as yet unclassified' stamp: 'tp 8/28/2023 11:48:10'!
+next
+	next ifNotNil: [^next].
+	next:= self cloneNamed: self name, 'I'.
+	next previous: self.
+	^next.! !
+!IIII class methodsFor: 'as yet unclassified' stamp: 'tp 8/28/2023 11:48:10'!
+previous
+	^previous! !
+!IIII class methodsFor: 'as yet unclassified' stamp: 'tp 8/28/2023 11:48:10'!
+previous: aNaturalNumber
+	previous:= aNaturalNumber! !
+
+III * II!
+
+DenotativeObject subclass: #IIIII
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Peano'!
+
+!classDefinition: #IIIII category: 'Peano' stamp: 'tp 8/28/2023 11:48:20'!
+DenotativeObject subclass: #IIIII
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Peano'!
+
+IIIII class
+	instanceVariableNames: 'next previous'!
+
+!classDefinition: 'IIIII class' category: 'Peano' stamp: 'tp 8/28/2023 11:48:20'!
+IIIII class
+	instanceVariableNames: 'next previous'!
+!IIIII class methodsFor: 'as yet unclassified' stamp: 'tp 8/28/2023 11:48:20'!
+* aNaturalNumber
+
+	^ aNaturalNumber  multiplicateA: self! !
+!IIIII class methodsFor: 'as yet unclassified' stamp: 'tp 8/28/2023 11:48:20'!
++ aNaturalNumber
+	^ self previous + aNaturalNumber next! !
+!IIIII class methodsFor: 'as yet unclassified' stamp: 'tp 8/28/2023 11:48:20'!
+- aNaturalNumber
+        
+	aNaturalNumber = I ifTrue: [^self previous].
+	^ self previous - aNaturalNumber previous 
+	! !
+!IIIII class methodsFor: 'as yet unclassified' stamp: 'tp 8/28/2023 11:48:20'!
+multiplicateA: aNaturalNumber
+
+	^ (aNaturalNumber * self previous) + aNaturalNumber! !
+!IIIII class methodsFor: 'as yet unclassified' stamp: 'tp 8/28/2023 11:48:20'!
+next
+	next ifNotNil: [^next].
+	next:= self cloneNamed: self name, 'I'.
+	next previous: self.
+	^next.! !
+!IIIII class methodsFor: 'as yet unclassified' stamp: 'tp 8/28/2023 11:48:21'!
+previous
+	^previous! !
+!IIIII class methodsFor: 'as yet unclassified' stamp: 'tp 8/28/2023 11:48:21'!
+previous: aNaturalNumber
+	previous:= aNaturalNumber! !
+
+DenotativeObject subclass: #IIIIII
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Peano'!
+
+!classDefinition: #IIIIII category: 'Peano' stamp: 'tp 8/28/2023 11:48:21'!
+DenotativeObject subclass: #IIIIII
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Peano'!
+
+IIIIII class
+	instanceVariableNames: 'next previous'!
+
+!classDefinition: 'IIIIII class' category: 'Peano' stamp: 'tp 8/28/2023 11:48:21'!
+IIIIII class
+	instanceVariableNames: 'next previous'!
+!IIIIII class methodsFor: 'as yet unclassified' stamp: 'tp 8/28/2023 11:48:21'!
+* aNaturalNumber
+
+	^ aNaturalNumber  multiplicateA: self! !
+!IIIIII class methodsFor: 'as yet unclassified' stamp: 'tp 8/28/2023 11:48:21'!
++ aNaturalNumber
+	^ self previous + aNaturalNumber next! !
+!IIIIII class methodsFor: 'as yet unclassified' stamp: 'tp 8/28/2023 11:48:21'!
+- aNaturalNumber
+        
+	aNaturalNumber = I ifTrue: [^self previous].
+	^ self previous - aNaturalNumber previous 
+	! !
+!IIIIII class methodsFor: 'as yet unclassified' stamp: 'tp 8/28/2023 11:48:21'!
+multiplicateA: aNaturalNumber
+
+	^ (aNaturalNumber * self previous) + aNaturalNumber! !
+!IIIIII class methodsFor: 'as yet unclassified' stamp: 'tp 8/28/2023 11:48:21'!
+next
+	next ifNotNil: [^next].
+	next:= self cloneNamed: self name, 'I'.
+	next previous: self.
+	^next.! !
+!IIIIII class methodsFor: 'as yet unclassified' stamp: 'tp 8/28/2023 11:48:21'!
+previous
+	^previous! !
+!IIIIII class methodsFor: 'as yet unclassified' stamp: 'tp 8/28/2023 11:48:21'!
+previous: aNaturalNumber
+	previous:= aNaturalNumber! !
+
+!classRemoval: #III stamp: 'tp 8/28/2023 11:52:53'!
+DenotativeObject subclass: #III
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Peano'!
+
+!classRemoval: #IIII stamp: 'tp 8/28/2023 11:52:56'!
+DenotativeObject subclass: #IIII
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Peano'!
+
+!classRemoval: #IIIII stamp: 'tp 8/28/2023 11:52:59'!
+DenotativeObject subclass: #IIIII
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Peano'!
+
+!classRemoval: #IIIIII stamp: 'tp 8/28/2023 11:53:01'!
+DenotativeObject subclass: #IIIIII
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Peano'!
+!I class methodsFor: 'as yet unclassified' stamp: 'tp 8/28/2023 12:06:51'!
+< aNaturalNumber
+	
+	^ aNaturalNumber esMenorA1: self
+! !
+!I class methodsFor: 'as yet unclassified' stamp: 'tp 8/28/2023 12:07:26'!
+esMenorA1: un1
+	
+	^ False
+! !
+!II class methodsFor: 'as yet unclassified' stamp: 'tp 8/28/2023 12:09:11'!
+< aNaturalNumber
+
+	^ self! !
+!I class methodsFor: 'as yet unclassified' stamp: 'tp 8/28/2023 12:09:37' prior: 50650878!
+< aNaturalNumber
+	
+	^ aNaturalNumber esMenorA: self
+! !
+!I class methodsFor: 'as yet unclassified' stamp: 'tp 8/28/2023 12:09:42'!
+esMenorA: un1
+	
+	^ False
+! !
+
+!methodRemoval: I class #esMenorA1: stamp: 'tp 8/28/2023 12:09:47'!
+esMenorA1: un1
+	
+	^ False
+!
+!II class methodsFor: 'as yet unclassified' stamp: 'tp 8/28/2023 12:10:18' prior: 50650887!
+< aNaturalNumber
+
+	^ aNaturalNumber esMenorA: self! !
+!II class methodsFor: 'as yet unclassified' stamp: 'tp 8/28/2023 12:11:10'!
+esMenorA: aNaturalNumber
+
+	^ self! !
+!II class methodsFor: 'as yet unclassified' stamp: 'tp 8/28/2023 12:12:37' prior: 50650903!
+< aNaturalNumber
+
+	^ aNaturalNumber esMenorA: self previous! !
+!I class methodsFor: 'as yet unclassified' stamp: 'tp 8/28/2023 12:12:54' prior: 50650891!
+< aNaturalNumber
+	
+	^ aNaturalNumber esMayorA: self
+! !
+!I class methodsFor: 'as yet unclassified' stamp: 'tp 8/28/2023 12:13:01'!
+esMayorA: un1
+	
+	^ False
+! !
+
+!methodRemoval: I class #esMenorA: stamp: 'tp 8/28/2023 12:13:10'!
+esMenorA: un1
+	
+	^ False
+!
+!II class methodsFor: 'as yet unclassified' stamp: 'tp 8/28/2023 12:14:21' prior: 50650913!
+< aNaturalNumber
+
+	^ aNaturalNumber esMayorA: self previous! !
+!II class methodsFor: 'as yet unclassified' stamp: 'tp 8/28/2023 12:14:29'!
+esMayorA: aNaturalNumber
+
+	^ self! !
+
+!methodRemoval: II class #esMenorA: stamp: 'tp 8/28/2023 12:14:33'!
+esMenorA: aNaturalNumber
+
+	^ self!
+!II class methodsFor: 'as yet unclassified' stamp: 'tp 8/28/2023 12:15:16' prior: 50650935!
+esMayorA: aNaturalNumber
+
+	^ self previous < aNaturalNumber ! !
+!I class methodsFor: 'as yet unclassified' stamp: 'tp 8/28/2023 12:19:14' prior: 50650923!
+esMayorA: aNaturalNumber
+	
+	^ False
+! !
+!I class methodsFor: 'as yet unclassified' stamp: 'tp 8/28/2023 13:05:34'!
+esMenorA: aNaturalNumber
+	
+	^ True
+! !
+!II class methodsFor: 'as yet unclassified' stamp: 'tp 8/28/2023 13:05:50' prior: 50650943!
+esMayorA: aNaturalNumber
+
+	^ self previous esMenorA: aNaturalNumber ! !
+!II class methodsFor: 'as yet unclassified' stamp: 'tp 8/28/2023 13:06:35' prior: 50650957!
+esMayorA: aNaturalNumber
+
+	^ self esMenorA: aNaturalNumber previous! !
+!II class methodsFor: 'as yet unclassified' stamp: 'tp 8/28/2023 13:06:47'!
+esMenorA: aNaturalNumber
+
+	^ self esMenorA: aNaturalNumber previous! !
+!II class methodsFor: 'as yet unclassified' stamp: 'tp 8/28/2023 13:07:14' prior: 50650968!
+esMenorA: aNaturalNumber
+
+	^ aNaturalNumber esMayorA: self previous! !
+!II class methodsFor: 'as yet unclassified' stamp: 'tp 8/28/2023 13:07:56' prior: 50650963!
+esMayorA: aNaturalNumber
+
+	^ aNaturalNumber previous esMenorA: self! !
+!II class methodsFor: 'as yet unclassified' stamp: 'tp 8/28/2023 13:08:38' prior: 50650980!
+esMayorA: aNaturalNumber
+
+	^ aNaturalNumber esMenorA: self previous! !
+
+I < I!
+
+II < I!
+
+I < II!
+
+II next!
+
+DenotativeObject subclass: #III
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Peano'!
+
+!classDefinition: #III category: 'Peano' stamp: 'tp 8/28/2023 13:12:36'!
+DenotativeObject subclass: #III
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Peano'!
+
+III class
+	instanceVariableNames: 'next previous'!
+
+!classDefinition: 'III class' category: 'Peano' stamp: 'tp 8/28/2023 13:12:36'!
+III class
+	instanceVariableNames: 'next previous'!
+!III class methodsFor: 'Auxiliares' stamp: 'tp 8/28/2023 13:12:36'!
+esMayorA: aNaturalNumber
+
+	^ aNaturalNumber esMenorA: self previous! !
+!III class methodsFor: 'Auxiliares' stamp: 'tp 8/28/2023 13:12:36'!
+esMenorA: aNaturalNumber
+
+	^ aNaturalNumber esMayorA: self previous! !
+!III class methodsFor: 'Auxiliares' stamp: 'tp 8/28/2023 13:12:36'!
+multiplicateA: aNaturalNumber
+
+	^ (aNaturalNumber * self previous) + aNaturalNumber! !
+!III class methodsFor: 'Auxiliares' stamp: 'tp 8/28/2023 13:12:36'!
+previous: aNaturalNumber
+	previous:= aNaturalNumber! !
+!III class methodsFor: 'Operaciones' stamp: 'tp 8/28/2023 13:12:36'!
+* aNaturalNumber
+
+	^ aNaturalNumber  multiplicateA: self! !
+!III class methodsFor: 'Operaciones' stamp: 'tp 8/28/2023 13:12:36'!
++ aNaturalNumber
+	^ self previous + aNaturalNumber next! !
+!III class methodsFor: 'Operaciones' stamp: 'tp 8/28/2023 13:12:36'!
+- aNaturalNumber
+        
+	aNaturalNumber = I ifTrue: [^self previous].
+	^ self previous - aNaturalNumber previous 
+	! !
+!III class methodsFor: 'Operaciones' stamp: 'tp 8/28/2023 13:12:36'!
+< aNaturalNumber
+
+	^ aNaturalNumber esMayorA: self previous! !
+!III class methodsFor: 'Operaciones' stamp: 'tp 8/28/2023 13:12:36'!
+next
+	next ifNotNil: [^next].
+	next:= self cloneNamed: self name, 'I'.
+	next previous: self.
+	^next.! !
+!III class methodsFor: 'Operaciones' stamp: 'tp 8/28/2023 13:12:36'!
+previous
+	^previous! !
+
+III < II!
+
+II < III!
+
+!classRemoval: #III stamp: 'tp 8/28/2023 13:12:54'!
+DenotativeObject subclass: #III
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Peano'!
+!II class methodsFor: '--** private fileout/in **--' stamp: 'tp 8/28/2023 13:13:19' overrides: 50637315!
+initializeCollaboratorsFromFile
+	"Auto generated method for loading purposes - Do not modify it"
+
+	next := nil.
+	previous := I.! !
+
+!methodRemoval: II class #initializeCollaboratorsFromFile stamp: 'tp 8/28/2023 13:13:19'!
+initializeCollaboratorsFromFile
+	"Auto generated method for loading purposes - Do not modify it"
+
+	next := nil.
+	previous := I.!
+
+1 / 2!
+
+1 / 3!
+
+1 div !
+!II class methodsFor: '--** private fileout/in **--' stamp: 'tp 8/28/2023 13:27:12' overrides: 50637315!
+initializeCollaboratorsFromFile
+	"Auto generated method for loading purposes - Do not modify it"
+
+	next := nil.
+	previous := I.! !
+
+!methodRemoval: II class #initializeCollaboratorsFromFile stamp: 'tp 8/28/2023 13:27:12'!
+initializeCollaboratorsFromFile
+	"Auto generated method for loading purposes - Do not modify it"
+
+	next := nil.
+	previous := I.!
