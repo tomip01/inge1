@@ -629,3 +629,305 @@ initializeCollaboratorsFromFile
 
 	next := nil.
 	previous := I.!
+
+----STARTUP---- (28 August 2023 23:54:39) as /home/tomas/uba/inge1/linux64/CuisUniversity-5981.image!
+
+
+----End fileIn of /home/tomas/uba/inge1/linux64/Peano3.st----!
+
+!classRemoval: #IIII stamp: 'tp 8/28/2023 23:56:26'!
+III subclass: #IIII
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Peano'!
+
+!classRemoval: #III stamp: 'tp 8/28/2023 23:56:31'!
+II subclass: #III
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Peano'!
+!II class methodsFor: 'Operaciones' stamp: 'tp 8/28/2023 23:56:37' prior: 50650463!
+next
+	next ifNotNil: [^next].
+	next:= II createChildNamed: self name, 'I'.
+	next previous: self.
+	^next.! !
+
+II next!
+
+II next!
+
+!classDefinition: #III category: 'Peano' stamp: 'tp 8/28/2023 23:56:55'!
+II subclass: #III
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Peano'!
+
+!classDefinition: 'III class' category: 'Peano' stamp: 'tp 8/28/2023 23:56:55'!
+III class
+	instanceVariableNames: ''!
+
+III next!
+
+!classDefinition: #IIII category: 'Peano' stamp: 'tp 8/28/2023 23:57:00'!
+II subclass: #IIII
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Peano'!
+
+!classDefinition: 'IIII class' category: 'Peano' stamp: 'tp 8/28/2023 23:57:00'!
+IIII class
+	instanceVariableNames: ''!
+
+II / III!
+!II class methodsFor: 'errores' stamp: 'tp 8/28/2023 23:58:06' prior: 50650472!
+descripcionDeErrorDeNoSePuedeDividirPorUnNumeroMayor
+
+	^ 'No se puede dividir por un numero mayor al actual'! !
+
+II / III!
+
+I - I!
+
+II < III!
+
+II / III!
+
+II / III!
+
+I - I!
+
+II / III!
+
+I - I!
+
+II / III!
+!I class methodsFor: 'Auxiliares' stamp: 'tp 8/29/2023 00:04:49' prior: 50650343!
+esMenorA: aNaturalNumber
+	
+	^ true
+! !
+!I class methodsFor: 'Auxiliares' stamp: 'tp 8/29/2023 00:04:54' prior: 50650339!
+esMayorA: aNaturalNumber
+	
+	^ false
+! !
+
+II / III!
+
+IIII - II!
+
+----End fileIn of /home/tomas/uba/inge1/linux64/Numeros Naturales Tests.st----!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'tp 8/29/2023 00:06:47'!
+PASSED!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'tp 8/29/2023 00:07:03'!
+PASSED!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'tp 8/29/2023 00:07:12'!
+PASSED!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'tp 8/29/2023 00:07:12'!
+PASSED!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'tp 8/29/2023 00:07:12'!
+PASSED!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'tp 8/29/2023 00:07:12'!
+PASSED!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'tp 8/29/2023 00:07:12'!
+PASSED!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'tp 8/29/2023 00:07:12'!
+PASSED!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'tp 8/29/2023 00:07:12'!
+PASSED!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'tp 8/29/2023 00:07:12'!
+PASSED!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'tp 8/29/2023 00:07:12'!
+ERROR!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'tp 8/29/2023 00:07:12'!
+PASSED!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'tp 8/29/2023 00:07:12'!
+PASSED!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'tp 8/29/2023 00:07:12'!
+PASSED!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'tp 8/29/2023 00:07:12'!
+ERROR!
+
+IIII / II!
+
+II < II!
+!I class methodsFor: 'Auxiliares' stamp: 'tp 8/29/2023 00:16:22' prior: 50650606!
+esMenorA: aNaturalNumber
+	aNaturalNumber = I ifTrue: [^false].
+	^ true
+! !
+
+II < II!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'tp 8/29/2023 00:16:36'!
+PASSED!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'tp 8/29/2023 00:16:36'!
+PASSED!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'tp 8/29/2023 00:16:36'!
+PASSED!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'tp 8/29/2023 00:16:36'!
+PASSED!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'tp 8/29/2023 00:16:36'!
+PASSED!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'tp 8/29/2023 00:16:36'!
+PASSED!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'tp 8/29/2023 00:16:36'!
+PASSED!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'tp 8/29/2023 00:16:36'!
+PASSED!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'tp 8/29/2023 00:16:36'!
+PASSED!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'tp 8/29/2023 00:16:36'!
+PASSED!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'tp 8/29/2023 00:16:36'!
+PASSED!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'tp 8/29/2023 00:16:36'!
+PASSED!
+!II class methodsFor: '--** private fileout/in **--' stamp: 'tp 8/29/2023 00:17:12' overrides: 50637315!
+initializeCollaboratorsFromFile
+	"Auto generated method for loading purposes - Do not modify it"
+
+	next := III.
+	previous := I.! !
+!III class methodsFor: '--** private fileout/in **--' stamp: 'tp 8/29/2023 00:17:12' overrides: 50650807!
+initializeCollaboratorsFromFile
+	"Auto generated method for loading purposes - Do not modify it"
+
+	next := IIII.
+	previous := II.! !
+!IIII class methodsFor: '--** private fileout/in **--' stamp: 'tp 8/29/2023 00:17:12' overrides: 50650807!
+initializeCollaboratorsFromFile
+	"Auto generated method for loading purposes - Do not modify it"
+
+	next := nil.
+	previous := III.! !
+
+!methodRemoval: II class #initializeCollaboratorsFromFile stamp: 'tp 8/29/2023 00:17:12'!
+initializeCollaboratorsFromFile
+	"Auto generated method for loading purposes - Do not modify it"
+
+	next := III.
+	previous := I.!
+
+!methodRemoval: III class #initializeCollaboratorsFromFile stamp: 'tp 8/29/2023 00:17:12'!
+initializeCollaboratorsFromFile
+	"Auto generated method for loading purposes - Do not modify it"
+
+	next := IIII.
+	previous := II.!
+
+!methodRemoval: IIII class #initializeCollaboratorsFromFile stamp: 'tp 8/29/2023 00:17:12'!
+initializeCollaboratorsFromFile
+	"Auto generated method for loading purposes - Do not modify it"
+
+	next := nil.
+	previous := III.!
+!II class methodsFor: '--** private fileout/in **--' stamp: 'tp 8/29/2023 00:17:30' overrides: 50637315!
+initializeCollaboratorsFromFile
+	"Auto generated method for loading purposes - Do not modify it"
+
+	next := III.
+	previous := I.! !
+!III class methodsFor: '--** private fileout/in **--' stamp: 'tp 8/29/2023 00:17:30' overrides: 50650852!
+initializeCollaboratorsFromFile
+	"Auto generated method for loading purposes - Do not modify it"
+
+	next := IIII.
+	previous := II.! !
+!IIII class methodsFor: '--** private fileout/in **--' stamp: 'tp 8/29/2023 00:17:30' overrides: 50650852!
+initializeCollaboratorsFromFile
+	"Auto generated method for loading purposes - Do not modify it"
+
+	next := nil.
+	previous := III.! !
+
+!methodRemoval: II class #initializeCollaboratorsFromFile stamp: 'tp 8/29/2023 00:17:30'!
+initializeCollaboratorsFromFile
+	"Auto generated method for loading purposes - Do not modify it"
+
+	next := III.
+	previous := I.!
+
+!methodRemoval: III class #initializeCollaboratorsFromFile stamp: 'tp 8/29/2023 00:17:30'!
+initializeCollaboratorsFromFile
+	"Auto generated method for loading purposes - Do not modify it"
+
+	next := IIII.
+	previous := II.!
+
+!methodRemoval: IIII class #initializeCollaboratorsFromFile stamp: 'tp 8/29/2023 00:17:30'!
+initializeCollaboratorsFromFile
+	"Auto generated method for loading purposes - Do not modify it"
+
+	next := nil.
+	previous := III.!
+!II class methodsFor: '--** private fileout/in **--' stamp: 'tp 8/29/2023 00:17:41' overrides: 50637315!
+initializeCollaboratorsFromFile
+	"Auto generated method for loading purposes - Do not modify it"
+
+	next := III.
+	previous := I.! !
+!III class methodsFor: '--** private fileout/in **--' stamp: 'tp 8/29/2023 00:17:41' overrides: 50650897!
+initializeCollaboratorsFromFile
+	"Auto generated method for loading purposes - Do not modify it"
+
+	next := IIII.
+	previous := II.! !
+!IIII class methodsFor: '--** private fileout/in **--' stamp: 'tp 8/29/2023 00:17:41' overrides: 50650897!
+initializeCollaboratorsFromFile
+	"Auto generated method for loading purposes - Do not modify it"
+
+	next := nil.
+	previous := III.! !
+
+!methodRemoval: II class #initializeCollaboratorsFromFile stamp: 'tp 8/29/2023 00:17:41'!
+initializeCollaboratorsFromFile
+	"Auto generated method for loading purposes - Do not modify it"
+
+	next := III.
+	previous := I.!
+
+!methodRemoval: III class #initializeCollaboratorsFromFile stamp: 'tp 8/29/2023 00:17:41'!
+initializeCollaboratorsFromFile
+	"Auto generated method for loading purposes - Do not modify it"
+
+	next := IIII.
+	previous := II.!
+
+!methodRemoval: IIII class #initializeCollaboratorsFromFile stamp: 'tp 8/29/2023 00:17:41'!
+initializeCollaboratorsFromFile
+	"Auto generated method for loading purposes - Do not modify it"
+
+	next := nil.
+	previous := III.!
