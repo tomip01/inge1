@@ -931,3 +931,473 @@ initializeCollaboratorsFromFile
 
 	next := nil.
 	previous := III.!
+
+----STARTUP---- (2 September 2023 15:51:57) as /home/tomas/uba/inge1/linux64/CuisUniversity-5981.image!
+
+
+----End fileIn of /home/tomas/uba/inge1/linux64/Numeros Naturales.st----!
+
+II / I!
+
+II / II!
+
+IIII / II!
+
+IIII / IIII!
+
+----STARTUP---- (2 September 2023 15:56:22) as /home/tomas/uba/inge1/linux64/CuisUniversity-5981.image!
+
+
+----End fileIn of /home/tomas/uba/inge1/linux64/Numeros Naturales.st----!
+
+----End fileIn of /home/tomas/uba/inge1/linux64/Numeros Naturales Tests.st----!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'tp 9/2/2023 15:56:58'!
+PASSED!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'tp 9/2/2023 15:56:58'!
+PASSED!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'tp 9/2/2023 15:56:58'!
+PASSED!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'tp 9/2/2023 15:56:58'!
+PASSED!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'tp 9/2/2023 15:56:58'!
+PASSED!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'tp 9/2/2023 15:56:58'!
+PASSED!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'tp 9/2/2023 15:56:58'!
+PASSED!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'tp 9/2/2023 15:56:58'!
+PASSED!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'tp 9/2/2023 15:56:58'!
+PASSED!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'tp 9/2/2023 15:56:58'!
+PASSED!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'tp 9/2/2023 15:56:58'!
+PASSED!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'tp 9/2/2023 15:56:58'!
+PASSED!
+
+----STARTUP---- (5 September 2023 12:01:36) as /home/tomas/uba/inge1/linux64/CuisUniversity-5981.image!
+
+
+----End fileIn of /home/tomas/uba/inge1/linux64/CodigoRepetido-Ejercicio.st----!
+!CustomerBookTest methodsFor: 'auxiliar' stamp: 'tp 9/5/2023 12:05:11' prior: 50650508!
+xx: aClosure yy: aSecondClosure zz: asda
+
+	[ aClosure value.
+	self fail ]
+		on: Error 
+		do: [:anError |].! !
+!CustomerBookTest methodsFor: 'auxiliar' stamp: 'tp 9/5/2023 12:05:59' prior: 50650621!
+xx: aClosure yy: aSecondClosure zz: asda
+
+	[ aClosure value.
+	self fail ]
+		on: asda 
+		do: aSecondClosure.! !
+!CustomerBookTest methodsFor: 'testing' stamp: 'tp 9/5/2023 12:07:04' prior: 50650379!
+test03CanNotAddACustomerWithEmptyName 
+
+	| customerBook |
+			
+	customerBook := CustomerBook new.
+	
+	
+
+	[ customerBook addCustomerNamed: ''.
+	self fail ]
+		on: Error 
+		do: [ :anError | 
+			self assert: anError messageText = CustomerBook customerCanNotBeEmptyErrorMessage.
+			self assert: customerBook isEmpty ]! !
+!CustomerBookTest methodsFor: 'testing' stamp: 'tp 9/5/2023 12:09:15' prior: 50650635!
+test03CanNotAddACustomerWithEmptyName 
+
+	| customerBook |
+			
+	customerBook := CustomerBook new.
+	
+	
+	self xx: [ customerBook addCustomerNamed: ''.]  
+		yy: Error 
+		zz: [ :anError | 
+			self assert: anError messageText = CustomerBook customerCanNotBeEmptyErrorMessage.
+			self assert: customerBook isEmpty ].! !
+!CustomerBookTest methodsFor: 'testing' stamp: 'tp 9/5/2023 12:09:44' prior: 50650391!
+test04CanNotRemoveAnInvalidCustomer
+	
+	| customerBook johnLennon |
+	
+	johnLennon := 'John Lennon'.		
+	customerBook := self newCustomerBookAndAddCustomer: johnLennon.
+	
+	self xx: [ customerBook removeCustomerNamed: 'Paul McCartney'.]  
+		yy: Error 
+		zz: [ :anError | 
+			self assert: anError messageText = CustomerBook customerCanNotBeEmptyErrorMessage.
+			self assert: customerBook isEmpty ].
+	
+	[ customerBook removeCustomerNamed: 'Paul McCartney'.
+	self fail ]
+		on: NotFound 
+		do: [ :anError | 
+			self assert: customerBook numberOfCustomers = 1.
+			self assert: (customerBook includesCustomerNamed: johnLennon) ]
+! !
+!CustomerBookTest methodsFor: 'testing' stamp: 'tp 9/5/2023 12:10:04' prior: 50650661!
+test04CanNotRemoveAnInvalidCustomer
+	
+	| customerBook johnLennon |
+	
+	johnLennon := 'John Lennon'.		
+	customerBook := self newCustomerBookAndAddCustomer: johnLennon.
+	
+	self xx: [ customerBook removeCustomerNamed: 'Paul McCartney'.]  
+		yy: NotFound 
+		zz: [ :anError | 
+			self assert: customerBook numberOfCustomers = 1.
+			self assert: (customerBook includesCustomerNamed: johnLennon)].
+! !
+!CustomerBookTest methodsFor: 'testing' stamp: 'tp 9/5/2023 12:11:48' prior: 50650446!
+test07CanNotSuspendAnInvalidCustomer
+	
+	| customerBook johnLennon |
+	johnLennon := 'John Lennon'.		
+	customerBook := self newCustomerBookAndAddCustomer: johnLennon.
+		
+	[ customerBook suspendCustomerNamed: 'George Harrison'.
+	self fail ]
+		on: CantSuspend 
+		do: [ :anError | 
+			self assert: customerBook numberOfCustomers = 1.
+			self assert: (customerBook includesCustomerNamed: johnLennon) ]
+! !
+!CustomerBookTest methodsFor: 'testing' stamp: 'tp 9/5/2023 12:12:29' prior: 50650700!
+test07CanNotSuspendAnInvalidCustomer
+	
+	| customerBook johnLennon |
+	johnLennon := 'John Lennon'.		
+	customerBook := self newCustomerBookAndAddCustomer: johnLennon.
+		
+	self xx: [ customerBook suspendCustomerNamed: 'George Harrison'.]  
+		yy: CantSuspend 
+		zz: [ :anError | 
+			self assert: customerBook numberOfCustomers = 1.
+			self assert: (customerBook includesCustomerNamed: johnLennon)].
+! !
+!CustomerBookTest methodsFor: 'testing' stamp: 'tp 9/5/2023 12:13:02' prior: 50650462!
+test08CanNotSuspendAnAlreadySuspendedCustomer
+	
+	| customerBook johnLennon |
+	johnLennon := 'John Lennon'.		
+	customerBook := self newCustomerBookAndAddCustomer: johnLennon.
+	customerBook suspendCustomerNamed: johnLennon.
+	
+	[ customerBook suspendCustomerNamed: johnLennon.
+	self fail ]
+		on: CantSuspend 
+		do: [ :anError | 
+			self assert: customerBook numberOfCustomers = 1.
+			self assert: (customerBook includesCustomerNamed: johnLennon) ]
+! !
+!CustomerBookTest methodsFor: 'testing' stamp: 'tp 9/5/2023 12:13:43' prior: 50650732!
+test08CanNotSuspendAnAlreadySuspendedCustomer
+	
+	| customerBook johnLennon |
+	johnLennon := 'John Lennon'.		
+	customerBook := self newCustomerBookAndAddCustomer: johnLennon.
+	customerBook suspendCustomerNamed: johnLennon.
+	
+	self xx: [ customerBook suspendCustomerNamed: johnLennon.]  
+		yy: CantSuspend 
+		zz: [ :anError | 
+			self assert: customerBook numberOfCustomers = 1.
+			self assert: (customerBook includesCustomerNamed: johnLennon)].
+	
+	[ customerBook suspendCustomerNamed: johnLennon.
+	self fail ]
+		on: CantSuspend 
+		do: [ :anError | 
+			self assert: customerBook numberOfCustomers = 1.
+			self assert: (customerBook includesCustomerNamed: johnLennon) ]
+! !
+!CustomerBookTest methodsFor: 'testing' stamp: 'tp 9/5/2023 12:14:02' prior: 50650749!
+test08CanNotSuspendAnAlreadySuspendedCustomer
+	
+	| customerBook johnLennon |
+	johnLennon := 'John Lennon'.		
+	customerBook := self newCustomerBookAndAddCustomer: johnLennon.
+	customerBook suspendCustomerNamed: johnLennon.
+	
+	self xx: [ customerBook suspendCustomerNamed: johnLennon.]  
+		yy: CantSuspend 
+		zz: [ :anError | 
+			self assert: customerBook numberOfCustomers = 1.
+			self assert: (customerBook includesCustomerNamed: johnLennon)].
+! !
+!CustomerBookTest methodsFor: 'auxiliar' stamp: 'tp 9/5/2023 12:17:00'!
+xx: aClosure zz: asda yy: aSecondClosure
+
+	[ aClosure value.
+	self fail ]
+		on: asda 
+		do: aSecondClosure.! !
+!CustomerBookTest methodsFor: 'testing' stamp: 'tp 9/5/2023 12:32:02' prior: 50650773!
+test08CanNotSuspendAnAlreadySuspendedCustomer
+	
+	| customerBook johnLennon |
+	johnLennon := 'John Lennon'.		
+	customerBook := self newCustomerBookAndAddCustomer: johnLennon.
+	customerBook suspendCustomerNamed: johnLennon.
+	
+	self  xx: [ customerBook suspendCustomerNamed: johnLennon.]  
+		yy: CantSuspend 
+		zz: [ :anError | 
+			self assert: customerBook numberOfCustomers = 1.
+			self assert: (customerBook includesCustomerNamed: johnLennon)].
+! !
+
+CantSuspend!
+
+Error!
+!CustomerBookTest methodsFor: 'testing' stamp: 'tp 9/5/2023 12:43:18' prior: 50650648!
+test03CanNotAddACustomerWithEmptyName 
+
+	| customerBook |
+			
+	customerBook := CustomerBook new.
+	
+	
+	self xx: [ customerBook addCustomerNamed: '']  
+		yy: Error 
+		zz: [ :anError | 
+			self assert: anError messageText = CustomerBook customerCanNotBeEmptyErrorMessage.
+			self assert: customerBook isEmpty ].! !
+!CustomerBookTest methodsFor: 'auxiliar' stamp: 'tp 9/5/2023 12:48:28' prior: 50650628!
+xx: aClosure yy: aSecondClosure zz: asda
+
+	[ aClosure value.
+	self fail ] value
+		on: asda 
+		do: aSecondClosure.! !
+
+!testRun: #CustomerBookTest #test03CanNotAddACustomerWithEmptyName stamp: 'tp 9/5/2023 12:48:32'!
+ERROR!
+
+!testRun: #CustomerBookTest #test03CanNotAddACustomerWithEmptyName stamp: 'tp 9/5/2023 12:48:32'!
+ERROR!
+
+!testRun: #CustomerBookTest #test04CanNotRemoveAnInvalidCustomer stamp: 'tp 9/5/2023 12:48:48'!
+ERROR!
+!CustomerBookTest methodsFor: 'auxiliar' stamp: 'tp 9/5/2023 12:50:26' prior: 50650828!
+xx: aClosure yy: aSecondClosure zz: asda
+
+	aClosure
+		on: asda 
+		do: aSecondClosure.! !
+!CustomerBookTest methodsFor: 'testing' stamp: 'tp 9/5/2023 12:50:41' prior: 50650815!
+test03CanNotAddACustomerWithEmptyName 
+
+	| customerBook |
+			
+	customerBook := CustomerBook new.
+	
+	
+	self xx: [ customerBook addCustomerNamed: ''. self fail]  
+		yy: Error 
+		zz: [ :anError | 
+			self assert: anError messageText = CustomerBook customerCanNotBeEmptyErrorMessage.
+			self assert: customerBook isEmpty ].! !
+!CustomerBookTest methodsFor: 'testing' stamp: 'tp 9/5/2023 12:52:07' prior: 50650851!
+test03CanNotAddACustomerWithEmptyName 
+
+	| customerBook |
+			
+	customerBook := CustomerBook new.
+	
+	
+	self xx: [ customerBook addCustomerNamed: ''. 
+			self fail]  
+		yy: Error 
+		zz: [ :anError | 
+			self assert: anError messageText = CustomerBook customerCanNotBeEmptyErrorMessage.
+			self assert: customerBook isEmpty ].! !
+!CustomerBookTest methodsFor: 'auxiliar' stamp: 'tp 9/5/2023 12:54:39' prior: 50650845!
+xx: aClosure yy: asda zz: aSecondClosure
+
+	[aClosure value.
+		self fail]
+		on: asda 
+		do: aSecondClosure.! !
+
+!testRun: #CustomerBookTest #test03CanNotAddACustomerWithEmptyName stamp: 'tp 9/5/2023 12:54:42'!
+PASSED!
+
+!testRun: #CustomerBookTest #test04CanNotRemoveAnInvalidCustomer stamp: 'tp 9/5/2023 12:54:44'!
+PASSED!
+
+!testRun: #CustomerBookTest #test07CanNotSuspendAnInvalidCustomer stamp: 'tp 9/5/2023 12:54:46'!
+PASSED!
+
+!testRun: #CustomerBookTest #test08CanNotSuspendAnAlreadySuspendedCustomer stamp: 'tp 9/5/2023 12:54:48'!
+PASSED!
+!CustomerBookTest methodsFor: 'testing' stamp: 'tp 9/5/2023 12:57:26' prior: 50650406!
+test05SuspendingACustomerShouldNotRemoveItFromCustomerBook
+
+	| customerBook paulMcCartney|
+	
+	paulMcCartney := 'Paul McCartney'.
+	customerBook := self newCustomerBookAndAddCustomer: paulMcCartney.
+	customerBook suspendCustomerNamed: paulMcCartney.
+	
+	self assert: 0 equals: customerBook numberOfActiveCustomers.
+	self assert: 1 equals: customerBook numberOfSuspendedCustomers.
+	self assert: 1 equals: customerBook numberOfCustomers.
+	self assert: (customerBook includesCustomerNamed: paulMcCartney).
+	
+
+	
+! !
+!CustomerBookTest methodsFor: 'testing' stamp: 'tp 9/5/2023 12:58:09' prior: 50650425!
+test06RemovingASuspendedCustomerShouldRemoveItFromCustomerBook
+
+	| customerBook paulMcCartney|
+	
+	paulMcCartney := 'Paul McCartney'.
+	
+	customerBook := self newCustomerBookAndAddCustomer: paulMcCartney.
+	customerBook suspendCustomerNamed: paulMcCartney.
+	customerBook removeCustomerNamed: paulMcCartney.
+	
+	self assert: 0 equals: customerBook numberOfActiveCustomers.
+	self assert: 0 equals: customerBook numberOfSuspendedCustomers.
+	self assert: 0 equals: customerBook numberOfCustomers.
+	self deny: (customerBook includesCustomerNamed: paulMcCartney).
+
+
+	
+! !
+
+!methodRemoval: CustomerBookTest #xx:yy: stamp: 'tp 9/5/2023 12:58:29'!
+xx: aClosure yy: aSecondClosure
+
+	[ aClosure.
+	self fail ]
+		on: Error 
+		do: aSecondClosure.!
+
+!methodRemoval: CustomerBookTest #xx:zz:yy: stamp: 'tp 9/5/2023 12:58:31'!
+xx: aClosure zz: asda yy: aSecondClosure
+
+	[ aClosure value.
+	self fail ]
+		on: asda 
+		do: aSecondClosure.!
+!CustomerBookTest methodsFor: 'auxiliar' stamp: 'tp 9/5/2023 12:58:55'!
+aa: xx
+
+	! !
+!CustomerBookTest methodsFor: 'auxiliar' stamp: 'tp 9/5/2023 13:01:15'!
+aa: xx bb: yy
+
+	self assert: xx equals: yy  .! !
+!CustomerBookTest methodsFor: 'auxiliar' stamp: 'tp 9/5/2023 13:02:03' prior: 50650950!
+aa: xx bb: yy
+
+	self assert: xx equals: yy  numberOfActiveCustomers.! !
+
+!methodRemoval: CustomerBookTest #aa: stamp: 'tp 9/5/2023 13:02:06'!
+aa: xx
+
+	!
+
+----QUIT----(5 September 2023 13:55:59) CuisUniversity-5981.image priorSource: 10197292!
+
+----STARTUP---- (6 September 2023 16:00:48) as /home/tomas/uba/inge1/linux64/CuisUniversity-5981.image!
+
+
+!classRemoval: #CustomerBook stamp: 'tp 9/6/2023 16:00:59'!
+Object subclass: #CustomerBook
+	instanceVariableNames: 'suspended active'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'CodigoRepetido-Ejercicio'!
+
+!classRemoval: #CustomerBookTest stamp: 'tp 9/6/2023 16:00:59'!
+TestCase subclass: #CustomerBookTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'CodigoRepetido-Ejercicio'!
+
+!classRemoval: #NotFound stamp: 'tp 9/6/2023 16:00:59'!
+Error subclass: #NotFound
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'CodigoRepetido-Ejercicio'!
+
+!classRemoval: #CantSuspend stamp: 'tp 9/6/2023 16:00:59'!
+Error subclass: #CantSuspend
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'CodigoRepetido-Ejercicio'!
+
+----End fileIn of /home/tomas/uba/inge1/linux64/CodigoRepetido-Ejercicio.st----!
+!CustomerBookTest methodsFor: 'auxiliar' stamp: 'tp 9/6/2023 16:11:09'!
+do: aClosure takeLessMillisecondsThan: aQuantityOfMilliseconds
+
+	| millisecondsAfterRunning millisecondsBeforeRunning |
+	
+	millisecondsBeforeRunning := self currentTimeInMilliseconds .
+	aClosure value.
+	millisecondsAfterRunning := self currentTimeInMilliseconds .
+	
+	self assert: (millisecondsAfterRunning-millisecondsBeforeRunning) < (aQuantityOfMilliseconds * millisecond)! !
+!CustomerBookTest methodsFor: 'as yet unclassified' stamp: 'tp 9/6/2023 16:11:09' prior: 50651031!
+test01AddingCustomerShouldNotTakeMoreThan50Milliseconds
+
+	| customerBook|
+	
+	customerBook := CustomerBook new.
+	
+	self do: [customerBook addCustomerNamed: 'John Lennon'.] takeLessMillisecondsThan: 50.
+	
+! !
+!CustomerBookTest methodsFor: 'as yet unclassified' stamp: 'tp 9/6/2023 16:11:09' prior: 50651040!
+test02RemovingCustomerShouldNotTakeMoreThan100Milliseconds
+
+	| customerBook paulMcCartney |
+	
+	paulMcCartney := 'Paul McCartney'.
+	
+	customerBook := self newCustomerBookAndAddCustomer: paulMcCartney.
+	  
+	self do: [customerBook removeCustomerNamed: paulMcCartney.] takeLessMillisecondsThan: 100.
+	
+! !
+
+!methodRemoval: CustomerBookTest #do:takeLessThan: stamp: 'tp 9/6/2023 16:11:09'!
+do: aClosure takeLessThan: aQuantityOfMilliseconds
+
+	| millisecondsAfterRunning millisecondsBeforeRunning |
+	
+	millisecondsBeforeRunning := self currentTimeInMilliseconds .
+	aClosure value.
+	millisecondsAfterRunning := self currentTimeInMilliseconds .
+	
+	self assert: (millisecondsAfterRunning-millisecondsBeforeRunning) < (aQuantityOfMilliseconds * millisecond)!
+
+----SNAPSHOT----(6 September 2023 16:11:52) CuisUniversity-5981.image priorSource: 10217976!
