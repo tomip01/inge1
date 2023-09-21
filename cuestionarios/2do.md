@@ -15,5 +15,5 @@ Sin embargo, no hay indicios de qué es lo que va a hacer cada interruptor, no s
 
 En cuanto al feedback, al interactuar con estos, podemos ver que se prenden/apagan o varía la potencia de las luces. Resulta inmediato ver si la acción que uno quería hacer, resultó en la correcta.
 
-Además, al usar un interruptor resulta en que uno intuitivamente sabe que sirve para encender o pagar. Pero como se usa en parte para manejar la intensidad, un modelo que creemos que podría ser mejor es utilizar dos potenciómetros. Creemos que el diseñador tenía en mente que se pueda regular la intensidad de las luces y que además se lo pueda hacer por sectores. Entonces, pensamos que los dos potenciómetros (uno para regular la intensidad de las luces traseras y uno para las delanteras) podrían ser más intuitivos para el usuario y de más fácil visibilidad. El feedback sería inmediato, al subir un potenciómetro la intensidad de las luces subiría en el sector que maneja el mismo
+Además, al usar un interruptor resulta en que uno intuitivamente sabe que sirve para encender o pagar. Pero como se usa en parte para manejar la intensidad, sería mejor tener una rueda o potenciómetro para deducir que es lo que hace.
 

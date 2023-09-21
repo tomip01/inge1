@@ -1,0 +1,5 @@
+tres := Entero with: 3.  .
+
+tresa integerValue 
+
+aa = 3
